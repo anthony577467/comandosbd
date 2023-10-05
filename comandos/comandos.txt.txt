@@ -1,0 +1,10 @@
+sudo apt update
+sudo apt upgrade
+sudo apt install mysql-server
+sudo passwd root
+sudo mysql_secure_installation
+mysql -u root
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'nueva_contraseña';
+mysql -u root -p
+GRANT ALL PRIVILEGES ON *.* TO 'nuevo_usuario'@'localhost';
+mysql -u nuevo_usuario -p
